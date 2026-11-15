@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ortakent Elektrik | Ortakent, Yahşi &amp; Müskebi 7/24 Elektrik Ustası</title>
+  <meta name="description" content="Ortakent, Yahşi ve Müskebi bölgelerinde 7/24 acil elektrik arıza servisi, villa ve iş yeri pano yenileme, bahçe aydınlatma, hidrofor ve kaçak akım çözümleri.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ortakentelektrik.com.tr/">
+  <style>
+    :root {
+      --bg-main: #f4f7f9;
+      --bg-card: #ffffff;
+      --primary: #0f3d56;
+      --primary-dark: #092636;
+      --accent: #e86f2c;
+      --accent-hover: #cf5b1b;
+      --whatsapp: #1f9d55;
+      --text-main: #1e293b;
+      --text-muted: #526071;
+      --border: #dce4ec;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 72px;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+      color: #ffffff;
+      padding: 16px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+    .nav-wrap {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+    }
+    .brand span { color: var(--accent); }
+    .header-cta {
+      background: var(--accent);
+      color: #fff;
+      text-decoration: none;
+      padding: 9px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .header-cta:hover { background: var(--accent-hover); }
+
+    .hero {
+      background: var(--primary);
+      color: #ffffff;
+      padding: 48px 20px 56px;
+      border-bottom: 4px solid var(--accent);
+    }
+    .hero-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 28px;
+      align-items: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(232, 111, 44, 0.2);
+      color: #ffad7d;
+      border: 1px solid rgba(232, 111, 44, 0.45);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-size: 2.15rem;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      font-weight: 800;
+    }
+    .hero p {
+      color: #d6e2ec;
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+    }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: transform 0.15s, opacity 0.2s;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-call { background: var(--accent); color: #ffffff; }
+    .btn-wa { background: var(--whatsapp); color: #ffffff; }
+
+    .hero-box {
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 22px;
+    }
+    .hero-box h2 {
+      font-size: 1.05rem;
+      color: #ffad7d;
+      margin-bottom: 12px;
+    }
+    .hero-box ul {
+      list-style: none;
+      font-size: 0.92rem;
+      color: #e2ecf3;
+    }
+    .hero-box li {
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .hero-box li:last-child { border-bottom: none; }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 36px 20px;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+      font-weight: 800;
+    }
+    .section-sub {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      font-size: 0.98rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 18px;
+      margin-bottom: 42px;
+    }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 10px;
+      padding: 22px;
+      box-shadow: 0 2px 6px rgba(15, 61, 86, 0.04);
+    }
+    .card:hover { border-left-color: var(--accent); }
+    .card h3 {
+      font-size: 1.1rem;
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+    }
+
+    .area-strip {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 26px;
+      margin-bottom: 42px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .tag {
+      background: #e9f0f5;
+      color: var(--primary-dark);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .faq-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin-bottom: 12px;
+    }
+    .faq-item h3 {
+      font-size: 1.02rem;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+    }
+    .faq-item p {
+      font-size: 0.93rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      background: var(--primary-dark);
+      color: #b7c8d6;
+      text-align: center;
+      padding: 26px 20px;
+      font-size: 0.88rem;
+    }
+    .mobile-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: none;
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      padding: 10px 12px;
+      gap: 10px;
+      z-index: 200;
+    }
+    .mobile-bar a {
+      flex: 1;
+      text-align: center;
+      padding: 12px;
+      border-radius: 8px;
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      h1 { font-size: 1.7rem; }
+      .mobile-bar { display: flex; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Electrician",
+        "name": "Ortakent Elektrik",
+        "url": "https://ortakentelektrik.com.tr/",
+        "description": "Ortakent, Yahşi ve Müskebi mahallelerinde 7/24 acil elektrik arıza onarımı, pano revizyonu, bahçe aydınlatma ve hidrofor elektrik servisi.",
+        "areaServed": [
+          { "@type": "Place", "name": "Ortakent, Bodrum" },
+          { "@type": "Place", "name": "Yahşi, Bodrum" },
+          { "@type": "Place", "name": "Müskebi, Bodrum" }
+        ],
+        "openingHours": "Mo-Su 00:00-23:59"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ortakent ve Yahşi bölgesine ne kadar sürede servis veriyorsunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Mobil servis aracımızla Ortakent merkez, Yahşi sahil hattı ve Müskebi mevkiindeki acil elektrik arızalarına genellikle 30-45 dakika içinde müdahale ediyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Yazlık ve müstakil evlerde sürekli atan kaçak akım rölesi arızasını çözüyor musunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Evet. Özellikle nem, bahçe aydınlatma armatürleri, dış mekan prizleri veya hidrofor pompalarından kaynaklanan toprak kaçaklarını ölçü aletleriyle noktasal tespit edip kalıcı olarak gideriyoruz."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ortakent çevresindeki ticari işletme ve mağazalar için pano bakımı yapıyor musunuz?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ortakent ana yol üzerindeki iş yerleri, restoranlar ve ofisler için trifaze yük dengeleme, termal kontrol, sigorta değişimi ve parafudr koruma montajı sağlıyoruz."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="brand">ORTAKENT <span>ELEKTRİK</span></div>
+    <a href="tel:+905324962448" class="header-cta">Hemen Usta Çağır</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <span class="badge">Ortakent • Yahşi • Müskebi 7/24 Mobil Servis</span>
+      <h1>Ortakent ve Yahşi Bölgesi Profesyonel Elektrik Arıza &amp; Tesisat Servisi</h1>
+      <p>Müstakil konutlar, yazlık siteler ve ticari işletmeler için günün her saati hızlı arıza tespiti, sigorta panosu yenileme, bahçe aydınlatma ve motor kontrol çözümleri.</p>
+      <div class="btn-group">
+        <a href="tel:+905324962448" class="btn btn-call">Telefonla Hemen Ara</a>
+        <a href="https://wa.me/905324962448?text=Merhaba,%20Ortakent%20bölgesi%20için%20elektrik%20servisi%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-wa" target="_blank" rel="noopener">WhatsApp Konum Gönder</a>
+      </div>
+    </div>
+    <div class="hero-box">
+      <h2>Neden Ortakent Elektrik?</h2>
+      <ul>
+        <li>✓ Ortakent &amp; Yahşi içi hızlı ulaşım</li>
+        <li>✓ Termal ve ölçü aletli noktasal arıza tespiti</li>
+        <li>✓ Siemens, Schneider ve Legrand malzeme</li>
+        <li>✓ Konut, site ve ticari işletme deneyimi</li>
+        <li>✓ Pazar ve gece dahil 7/24 acil müdahale</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<main>
+  <h2 class="section-title">Ortakent Elektrik Teknik Hizmetlerimiz</h2>
+  <p class="section-sub">Konut ve ticari yapılarınızın elektrik güvenliği için sunduğumuz başlıca uygulamalar:</p>
+
+  <div class="grid">
+    <article class="card">
+      <h3>7/24 Acil Elektrik Arıza ve Sigorta Onarımı</h3>
+      <p>Ani elektrik kesintileri, sürekli atan otomatlar, yanık priz ve buat arızalarına aynı gün içinde güvenli müdahale.</p>
+    </article>
+    <article class="card">
+      <h3>Kaçak Akım Rölesi ve Parafudr Koruma</h3>
+      <p>Voltaj dalgalanmalarına ve nem kaynaklı toprak kaçaklarına karşı pano içi 30mA/300mA kaçak akım ve aşırı gerilim koruma kurulumu.</p>
+    </article>
+    <article class="card">
+      <h3>Bahçe, Havuz ve Dış Mekan Aydınlatma</h3>
+      <p>Yahşi ve Ortakent müstakil evleri için suya dayanıklı IP65/IP68 LED projektör, yürüyüş yolu ve peyzaj aydınlatma tesisatı.</p>
+    </article>
+    <article class="card">
+      <h3>Hidrofor ve Kuyu Pompası Pano Arızaları</h3>
+      <p>Site ve villa su depolarındaki hidrofor, dalgıç pompa kontaktörleri, flatör ve faz koruma rölesi arıza onarımı.</p>
+    </article>
+    <article class="card">
+      <h3>Ticari İşletme ve Mağaza Tesisatı</h3>
+      <p>Ortakent ana cadde üzerindeki dükkan, kafe ve ofisler için trifaze pano düzenleme, vitrin aydınlatma ve hat çekimi.</p>
+    </article>
+    <article class="card">
+      <h3>Klima, Şofben ve EV Şarj Besleme Hattı</h3>
+      <p>Yüksek akım çeken klima, ani su ısıtıcı ve elektrikli araç duvar tipi şarj üniteleri için müstakil NYM/TTR kablo hattı çekimi.</p>
+    </article>
+  </div>
+
+  <section class="area-strip">
+    <h2 class="section-title">Aktif Hizmet Verdiğimiz Noktalar</h2>
+    <p class="section-sub">Ortakent merkez başta olmak üzere çevre mahalle ve mevkilere tam donanımlı mobil araçla servis sağlıyoruz:</p>
+    <div class="tags">
+      <span class="tag">Ortakent Merkez</span>
+      <span class="tag">Yahşi Sahil</span>
+      <span class="tag">Müskebi</span>
+      <span class="tag">Kargı Koyu Çevresi</span>
+      <span class="tag">Yakaköy Yolu</span>
+      <span class="tag">Ortakent Sanayi &amp; Cadde</span>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">Sıkça Sorulan Sorular</h2>
+    <div class="faq-item">
+      <h3>Ortakent ve Yahşi bölgesine ne kadar sürede servis veriyorsunuz?</h3>
+      <p>Mobil servis aracımızla Ortakent merkez, Yahşi sahil hattı ve Müskebi mevkiindeki acil elektrik arızalarına genellikle 30-45 dakika içinde müdahale ediyoruz.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Yazlık ve müstakil evlerde sürekli atan kaçak akım rölesi arızasını çözüyor musunuz?</h3>
+      <p>Evet. Özellikle nem, bahçe aydınlatma armatürleri, dış mekan prizleri veya hidrofor pompalarından kaynaklanan toprak kaçaklarını ölçü aletleriyle noktasal tespit edip kalıcı olarak gideriyoruz.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Ortakent çevresindeki ticari işletme ve mağazalar için pano bakımı yapıyor musunuz?</h3>
+      <p>Ortakent ana yol üzerindeki iş yerleri, restoranlar ve ofisler için trifaze yük dengeleme, termal kontrol, sigorta değişimi ve parafudr koruma montajı sağlıyoruz.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Ortakent Elektrik • Ortakent / Yahşi / Bodrum • 7/24 Mobil Elektrik Teknik Servisi</p>
+</footer>
+
+<div class="mobile-bar">
+  <a href="tel:+905324962448" style="background: var(--accent);">Hemen Ara</a>
+  <a href="https://wa.me/905324962448?text=Merhaba,%20Ortakent%20bölgesi%20için%20elektrik%20servisi%20istiyorum." style="background: var(--whatsapp);">WhatsApp</a>
+</div>
+
+</body>
+</html>
